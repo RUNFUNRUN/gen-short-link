@@ -1,0 +1,16 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "gen-short-link"
+main = ".open-next/worker.js"
+
+compatibility_date = "2025-02-09"
+compatibility_flags = ["nodejs_compat"]
+
+# Assets used for files and cache priming.
+assets = { directory = ".open-next/assets", binding = "ASSETS" }
+
+[observability.logs]
+enabled = true
+
+[[kv_namespaces]]
+binding = "LINK_KV"
+id = "430b7ae9703c4a64b64b5eabae26719f"
